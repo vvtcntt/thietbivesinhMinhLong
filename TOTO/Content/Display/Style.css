@@ -1,0 +1,61 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+body {
+  
+ background:#FFF;
+    font: 12px arial;
+    margin: 0;
+    padding: 0;
+ 
+}
+@font-face { font-family: Roboto; src:url(../Font/Roboto-Bold.ttf); }
+@font-face { font-family: UTMSwiss; src:url(../Font/UTMSwiss.ttf); }
+@font-face { font-family: UTM_Cafeta; src: url(../Font/UTM%20Cafeta.ttf); }
+@font-face { font-family: Dientu; src:url(../Font/QuartzRegular.ttf); }
+@font-face { font-family: VJAM; src:url(../Font/VJAM.ttf); }
+
+@font-face { font-family: UTM-Swiss-CondensedBold; src:url(../Font/UTM-Swiss-CondensedBold.ttf); }
+@font-face { 
+font-family:taho; 
+src:url(../Font/UTMChickenhawk.ttf)
+}
+ 
+@font-face { 
+font-family:UTM_SwissCondensed; 
+src:url(../Font/UTM_SwissCondensed.ttf); 
+}
+ul,li{ padding:0px; margin:0px; outline:0px; vertical-align:baseline; border:0px}
+ul,li{ list-style:none  }
+a{text-decoration:none}
+a:hover{color:#176388 !important}
+img { border:none}
+.Clear{ clear:both}
+table{width:100%; height:auto;}
+.Top{ width:100%; height:25px;   margin:0px; background:#2a2a2a; color:#FFF; text-align:center; text-transform:uppercase;  }
+ .Center_1{ background:#f8f8f8}
+  .Center_1 .Code{ font-weight:bold}
+ .Center_1 .Name{ text-align:left; text-indent:10px}
+.Ord,.Name,.Code,.Name_seabig{line-height:25px; text-align:center}
+.Name_compe{line-height:22px;   text-align:center; font-size:14px; font-weight:bold}
+.web{ text-transform:none; font-size:11px; text-align:center; display:block; line-height:normal; margin:1px auto; color:#FF0}
+.Name_seabig input{ width:120px; height:25px; border:none; border-radius:4px; margin:1px auto; display:block; text-align:center}
+  .Center_1 .Name_seabig{ font-weight:bold; font-size:15px; background:#eaeaea}
+  .Name_compe a{ color:#fffc00; font-weight:normal; text-align:center; display:block; font-size:12px }
+  .Name_compe a img{ margin:0px 5px; width:10px; height:10px }
+.Banner{ width:100%; height:auto; float:left; margin:0px}
+.Banner .Left_Banner{ width:25%; height:auto; float:left; margin:0px}
+.Banner .Left_Banner img{ margin:15px auto 5px auto; display:block}
+
+.Banner .Left_Banner span{font-size:17px;  text-align:center;  text-transform:uppercase; display:block}
+.Banner  .Right_Banner{ width:74%; height:auto; float:left; margin:0px}
+.Banner  .Right_Banner span{  display:block; text-transform:uppercase; font-size:40px; margin:25px 50px}
+.Note{width:500px; height:auto;  margin:15px auto; border:1px dashed #9e9e9e}
+ .Login p{   color:#000; font-size:17px; margin:2px}
+  .Login p span{ width:50px; height:20px; background:#F00; float:left}
+.refresh{ text-align:center; display:block; font-size:25px}
+ .refresh img{ margin:5px}
+ .Login{width:500px; height:auto;  margin:15px auto; border:1px dashed #9e9e9e}
+ .Login input{ margin:5px auto; display:block; border:1px solid #9e9e9e; height:30px; text-align:center; text-indent:15px }

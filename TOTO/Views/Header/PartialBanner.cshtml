@@ -1,0 +1,64 @@
+﻿@model TOTO.Models.tblConfig
+<div id="Banner">
+    <div id="Left_Banner">
+        <div id="Logo">
+            <a href="/" title="Trang chủ" rel="nofollow">
+                <img src="@Model.Logo" alt="logo toto" title="Logo" />
+            </a>
+        </div>
+        <div id="Chinhhang"></div>
+    </div>
+    <div id="Right_Banner">
+        <div id="Top_RightBanner">
+            <a href="/2/Tin-tuc" title="Tin tức" rel="nofollow">Tin tức</a>
+            <a href="#" title="Giới thệu" rel="nofollow">Giới thiệu</a>
+            <a href="/Lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a>
+            <a href="/Ban-do" title="Bản đồ" rel="nofollow">Bản đồ</a>
+            <a href="#" class="en" title="Ngôn ngữ tiếng việt"><span></span></a>
+            <a href="#" title="Ngôn ngữ tiếng việt" class="vn"><span></span></a>
+        </div>
+        <div id="Buttom_RightBanner">
+             
+               @{Html.RenderAction("PartialSearch", "Header");}
+            
+            <div id="Box_Hotline">
+
+                @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
+                {
+
+                    <span>@Model.HotlineOUT (*)</span>
+
+                }
+                else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
+                {
+
+                    <span>@Model.HotlineIN (*)</span>
+                }
+
+
+                else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
+                {
+                    <span>@Model.HotlineOUT (*)</span>
+
+                }
+
+
+
+                
+            </div>
+            <div id="Box_Order">
+
+                @if (Session["soluong"] != "" && Session["soluong"] != null)
+                {
+                    
+    <a href="/Order/OrderIndex" title="Giỏ hàng" class="CountOf"> <span></span> Giỏ hàng : @Session["soluong"].ToString()  </a>
+                }
+                else
+                {
+                    <a href="/Order/OrderIndex" title="Giỏ hàng" class="CountOf"> <span></span> Giỏ hàng : 0   </a>
+                }
+                
+            </div>
+        </div>
+    </div>
+</div>

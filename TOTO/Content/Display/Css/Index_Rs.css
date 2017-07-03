@@ -1,0 +1,101 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 768px) 
+{
+	#Banner{ width:100%; float:left; margin:0; padding:0; overflow:hidden}
+#Banner #Left_Banner{ width:40%; height:100%; float:left; margin:0px}	
+#Banner #Left_Banner #Logo{ width:180px; height:100%; float:left; margin:0px; height:auto}
+#Banner #Left_Banner #Logo a img{ max-width:100%; height:auto; float:left; margin:30px 0px 5px 5px}
+#Banner #Left_Banner #Chinhhang{ width:73px; height:18px; float:left; margin:45px 5px 5px 10px; background:url(../iCon/chinhhang.gif) no-repeat} 
+#Banner #Right_Banner{ width:60% }
+#Banner #Right_Banner #Buttom_RightBanner{ height:auto}
+ .Box_Search{ width:222px; height:25px; background:url(../iCon/bg_search.png) no-repeat; float:left; margin:8px 5px}
+ 
+#Banner #Right_Banner #Buttom_RightBanner #Box_Hotline{ width:157px; height:34px; float:left; background:url(../iCon/hotline.png) no-repeat; margin:2px 7px 2px 10px}
+#Banner #Right_Banner #Buttom_RightBanner #Box_Hotline span{ font-size:15px; color:#ff4200; font-family:Tahoma, Geneva, sans-serif; margin:16px 5px 5px 34px; display:block}
+#Box_Order{ width:100px; height:19px; float:right; margin:8px 0px 5px 0px; padding:0px; background:url(../iCon/giohang.png) no-repeat left center scroll transparent}	
+#Banner #Right_Banner #Top_RightBanner{ width:100%; height:30px; float:left; text-align:right; margin:0px}
+#Banner #Right_Banner #Top_RightBanner a{ color:#383838; font-size:12px; margin:auto 3px; line-height:30px}
+#Banner #Right_Banner #Top_RightBanner a.vn span{ margin-top:7px; margin-left:10px}
+#Banner #Right_Banner #Top_RightBanner a.en span{ margin-top:7px}
+#Content_Sidebar{ width:100%}
+#Content_Sidebar #Logo{ margin-left:10px}
+#Content_Sidebar #Hotline{ display:none}
+#Content_Sidebar #Giohang{ display:none}
+#Content_Sidebar #Search{ margin:0px 5px}
+#Menu_width{ width:100%; margin:0px; float:left}
+#Menu_width ul li.li1 a{ margin:7px 10px ; text-transform:uppercase; color:#383838; display:block; font-size:12px}
+#Footter #LinkURL{ width:100%}
+
+#Menu_width ul li.Homes{display:none}
+#Menu_width ul li.li1:last-child{ display:none}
+#Main{ width:100%; height:auto; float:left; margin:0px; padding:0px}
+#Left_Headder{ width:100%; overflow:hidden; margin:0px}
+#Right_Headder{ display:none}
+#Headder #Left_Headder{ width:100%; margin:0px}
+#Headder{ overflow:hidden}
+#Content_ProductSale .Tear_Sale{ width:32%}
+#ProductSale h3{ margin-left:10px}
+#Product h3{ margin-left:10px}
+.ProductHomes .Content_ProductHomes{ width:99%; border:none}
+.ProductHomes .bg_ProductHomes{ background:none}
+.ProductHomes .Content_ProductHomes .Left_Content_ProductHomes{ display:none}
+.ProductHomes .Content_ProductHomes .Right_Content_ProductHomes{ width:100%}
+.Tear_1{ width:24%}
+#Services{ width:100%; float:left; margin:0px}
+.Tear_Chinhhang{ width:48%; height:auto}
+.Tear_Dichvu{ width:48%; margin:0px 5px 0px 10px; height:auto}
+.Tear_Dichvu .Name{ font-size:15px}
+.Tear_Chinhhang .Name{ font-size:15px}
+.Tear_Muahang{ display:none}
+.Tear_Chinhhang:last-child{display:none}
+#List_Info{ width:100%; height:auto; float:left; margin:0px}
+.Tear_Info{ width:30%; height:auto; float:left}
+.Tear_Info-1{ width:32%; height:auto; float:left}
+.Tear_Info_2{ display:none}
+.Tear_Info .Name{ font-size:15px}
+.Tear_Info-1 .Name{ font-size:15px}
+#Footter #Content_Footter{ width:100%; float:left; margin:0}
+#Footter #Content_Footter #Left{ background-size:100%}
+#Footter #Content_Footter #Right img{ max-width:100%}
+#Footter #Content_Footter #Center .Coppyright{ font-size:11px}
+#Footter #Content_Footter #Center .ft1{ font-size:10px}
+.ProductHomes .nVar .Left_nVar .Name{ background:#13439c}
+ .ProductHomes .nVar .Left_nVar .iCon_nVar {
+    border: 1px solid #13439c;
+}
+#Content_Sidebar #Menu span{ font-size:15px}
+#Content_Sidebar #Menu{ margin:0px 5px}
+.Line_ft{ width:100%; float:left}
+footer{ border:none}
+#ProductSYN{ width:100%}
+#BannerTimes{ width:100%; background-size:100%; height:70px}
+#Maps_Homes{ width:100%}
+ 
+}
+@media screen and (max-width: 480px) 
+{
+	header{ background:#fff;}
+	#Banner{ height:auto; display:none}
+	#Banner #Right_Banner #Buttom_RightBanner{ display:none}
+	#Sidebar{ display:block; height:60px; overflow:hidden}
+	#Content_Sidebar #Menu{ display:none}
+	#Content_Sidebar #Search{ display:none}
+	#MenuMobile{ display:block}
+	#Menu_width{ display:none}
+	#menu{ z-index:5000}
+
+	#Content_ProductSale .Tear_Sale{ width:48%}
+	.ProductHomes .nVar .Right_nVar{ display:none}
+	.Tear_Dichvu{ width:99%; height:auto; margin:5px 2px}
+	.Tear_Chinhhang{ width:99%; height:auto; margin:5px 2px}
+	.Tear_Info{ width:48%; height:auto; margin:5px 2px}
+	.Tear_Info-1{ width:99%; height:auto; margin:5px 2px}
+	.Tear_1{ width:48%}
+	#Footter #Content_Footter #Center .Name{ font-size:14px}
+	#Footter #Content_Footter #Right{ display:none}
+	#Footter #Content_Footter #Center{ width:72%}
+	.Tear_Info .Name{ font-size:14px}
+	 #Maps_Homes{ display:none}
+}

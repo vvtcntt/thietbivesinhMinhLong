@@ -1,0 +1,12 @@
+﻿@{
+     Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+
+@{Html.RenderAction("PatialHeader", "Header");}
+@{Html.RenderAction("PartialProductSaleHomes", "Product");}
+<div class="Clear"></div>
+@{Html.RenderAction("ListProductSyn", "ProductSynDisplay");}
+<div class="Clear"></div>
+@{Html.RenderAction("PartialProductHomes", "Product");}
+@Html.Raw(ViewBag.Thongbao)
+<div class="Clear"></div>

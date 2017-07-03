@@ -1,0 +1,60 @@
+﻿@model TOTO.Models.tblConfig
+<div id="Sidebar">
+    <div id="Content_Sidebar">
+        <div class="Logo">
+            <a href="/" title="Trang chủ" rel="nofollow"><img src="~/Content/Display/iCon/logo-wihile.png" alt="@Model.Name" title="Logo" /></a>
+     
+        </div>
+        <div id="MenuMobile">
+            <a href="#menu"><span></span>Danh mục</a>
+        </div>
+        <div class="Chinhhang"></div>
+        <div id="Menu">
+            <span><span class="iCon"></span> Danh mục sản phẩm</span>
+            <ul class="ul1">
+                @Html.Raw(ViewBag.chuoi)
+                 
+            </ul>
+        </div>
+        <div id="Search">
+@{Html.RenderAction("PartialSearch", "Header");}
+        </div>
+        <div id="Hotline">
+
+
+
+            @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
+            {
+
+                 <span>Hotline :@Model.HotlineOUT</span>
+
+            }
+            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
+            {
+
+                <span>Hotline :@Model.HotlineIN</span>
+            }
+
+
+            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
+            {
+                <span>Hotline :@Model.HotlineOUT</span>
+
+            }
+            
+           
+        </div>
+        <div id="Giohang">
+            @if (Session["soluong"] != null)
+            {
+
+                <a href="/Order/OrderIndex" title="Giỏ hàng" class="CountOf"> <span></span> Giỏ hàng : @Session["soluong"].ToString()  </a>
+            }
+            else
+            {
+                <a href="/Order/OrderIndex" title="Giỏ hàng" class="CountOf"> <span></span> Giỏ hàng : 0   </a>
+            }
+           
+        </div>
+    </div>
+</div>

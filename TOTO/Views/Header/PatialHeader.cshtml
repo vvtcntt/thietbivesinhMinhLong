@@ -1,0 +1,41 @@
+﻿@model IEnumerable<TOTO.Models.tblImage>
+<div id="Headder">
+    <div id="Left_Headder">
+         
+        <div id="slideshow">
+
+
+            <div class="container">
+                <div class="c_slider" style="background:@Html.Raw(ViewBag.chuoislide)"></div>
+                <div class="slider">
+                    @foreach (var item in Model)
+                    {
+                        <figure>
+                            <a href="@item.Url" title="@item.Name" rel="@item.Link"> <img src="@item.Images" alt="@item.Name" width="770" height="352" title="@item.Name" /></a>
+                        </figure>
+                    }
+                </div>
+            </div>
+
+            <span id="timeline"></span>
+
+
+
+        </div>
+    </div>
+    <div id="Right_Headder">
+        <div  class="Tear_Adw" style="background:url(../Content/Display/iCon/CATALOGUE.png) no-repeat">
+            <a href="/Catalogues" title="Catalogis" rel="nofollow"><span></span></a>
+        </div>
+        <div class="Tear_Adw" style="background:url(../Content/Display/iCon/News.png) no-repeat">
+            <div class="Conten_Tear_Adwt"> 
+               @Html.Raw(ViewBag.chuoi)
+            </div>
+            <a href="/2/Tin-tuc" title="Tin tức" rel="nofollow"><span></span></a>
+
+        </div>
+        <div class="Tear_Adw" style="background:url(../Content/Display/iCon/techcologys.png) no-repeat">
+            <a href="/2/Cong-nghe-san-pham" title="Công nghệ"><span></span></a>
+        </div>
+    </div>
+</div>
