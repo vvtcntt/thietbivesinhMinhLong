@@ -275,7 +275,7 @@ namespace TOTO.Controllers.Display.Session.Product
             ViewBag.Description = "<meta name=\"description\" content=\"" + Product.Description + "\"/>";
             ViewBag.Keyword = "<meta name=\"keywords\" content=\"" + Product.Keyword + "\" /> ";
             string meta = "";
-            ViewBag.canonical = "<link rel=\"canonical\" href=\"http://Thietbivesinhtoto.vn/" + Product.Tag+ "-pd\" />";
+            ViewBag.canonical = "<link rel=\"canonical\" href=\"/" + Product.Tag+ "-pd\" />";
             meta += "<meta itemprop=\"name\" content=\"" + Product.Title + "\" />";
             meta += "<meta itemprop=\"url\" content=\"" + Request.Url.ToString() + "\" />";
             meta += "<meta itemprop=\"description\" content=\"" + Product.Description + "\" />";
@@ -284,7 +284,7 @@ namespace TOTO.Controllers.Display.Session.Product
             meta += "<meta property=\"og:type\" content=\"product\" />";
             meta += "<meta property=\"og:url\" content=\"" + Request.Url.ToString() + "\" />";
             meta += "<meta property=\"og:image\" content=\"\" " + Product.ImageLinkThumb + "/>";
-            meta += "<meta property=\"og:site_name\" content=\"http://Thietbivesinhtoto.vn\" />";
+            meta += "<meta property=\"og:site_name\" content=\"http://thietbivesinhminhlong.vn\" />";
             meta += "<meta property=\"og:description\" content=\"" + Product.Description + "\" />";
             meta += "<meta property=\"fb:admins\" content=\"\" />";
             ViewBag.Meta = meta; 
@@ -502,7 +502,7 @@ namespace TOTO.Controllers.Display.Session.Product
             ViewBag.Description = "<meta name=\"description\" content=\"" + GroupProduct.Description + "\"/>";
             ViewBag.Keyword = "<meta name=\"keywords\" content=\"" + GroupProduct.Keyword + "\" /> ";
             string meta = "";
-            ViewBag.canonical = "<link rel=\"canonical\" href=\"http://Thietbivesinhtoto.vn/" + GroupProduct.Tag + ".html\" />";
+            ViewBag.canonical = "<link rel=\"canonical\" href=\"http://thietbivesinhminhlong.vn/" + GroupProduct.Tag + ".html\" />";
             meta += "<meta itemprop=\"name\" content=\"" + GroupProduct.Title + "\" />";
             meta += "<meta itemprop=\"url\" content=\"" + Request.Url.ToString() + "\" />";
             meta += "<meta itemprop=\"description\" content=\"" + GroupProduct.Description + "\" />";
@@ -511,7 +511,7 @@ namespace TOTO.Controllers.Display.Session.Product
             meta += "<meta property=\"og:type\" content=\"product\" />";
             meta += "<meta property=\"og:url\" content=\"" + Request.Url.ToString() + "\" />";
             meta += "<meta property=\"og:image\" content=\"\" " + GroupProduct.Images + "/>";
-            meta += "<meta property=\"og:site_name\" content=\"http://Thietbivesinhtoto.vn\" />";
+            meta += "<meta property=\"og:site_name\" content=\"http://thietbivesinhminhlong.vn\" />";
             meta += "<meta property=\"og:description\" content=\"" + GroupProduct.Description + "\" />";
             meta += "<meta property=\"fb:admins\" content=\"\" />";
             ViewBag.Meta = meta; 

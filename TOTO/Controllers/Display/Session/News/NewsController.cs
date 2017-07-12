@@ -50,7 +50,7 @@ namespace TOTO.Controllers.Display.Session.News
             ViewBag.Description = "<meta name=\"description\" content=\"" + tblnews.Description + "\"/>";
             ViewBag.Keyword = "<meta name=\"keywords\" content=\"" + tblnews.Keyword + "\" /> ";
             string meta = "";
-            ViewBag.canonical = "<link rel=\"canonical\" href=\"http://thietbivesinhtoto.vn/tin-tuc/" + StringClass.NameToTag(tag) + "\" />";
+            ViewBag.canonical = "<link rel=\"canonical\" href=\"http://thietbivesinhminhlong.vn/tin-tuc/" + StringClass.NameToTag(tag) + "\" />";
             meta += "<meta itemprop=\"name\" content=\"" + tblnews.Name + "\" />";
             meta += "<meta itemprop=\"url\" content=\"" + Request.Url.ToString() + "\" />";
             meta += "<meta itemprop=\"description\" content=\"" + tblnews.Description + "\" />";
@@ -59,7 +59,7 @@ namespace TOTO.Controllers.Display.Session.News
             meta += "<meta property=\"og:type\" content=\"News\" />";
             meta += "<meta property=\"og:url\" content=\"" + Request.Url.ToString() + "\" />";
             meta += "<meta property=\"og:image\" content=\"\" />";
-            meta += "<meta property=\"og:site_name\" content=\"http://thietbivesinhinax.vn\" />";
+            meta += "<meta property=\"og:site_name\" content=\"http://thietbivesinhminhlong.vn\" />";
             meta += "<meta property=\"og:description\" content=\"" + tblnews.Description + "\" />";
             meta += "<meta property=\"fb:admins\" content=\"\" />";
             ViewBag.Meta = meta; 
