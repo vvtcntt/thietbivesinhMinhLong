@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1583,6 +1584,7 @@
     <Content Include="Content\Display\iCon\prettyPhoto\facebook\Thumbs.db" />
     <Content Include="Content\Display\iCon\toilet.ms864t2.pdf" />
     <Content Include="Content\Display\toto.psd" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\Thietbivesinhtoto.vn.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\disable-copyright.js" />

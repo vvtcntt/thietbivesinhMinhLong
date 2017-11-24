@@ -72,26 +72,7 @@ namespace TOTO.Controllers.Display.Session.Product
                 else
                 { chuoi.Append("<span class=\"Status1\"></span>"); }
                  chuoi.Append("</div>");
-                chuoi.Append("<div class=\"Buttom_Left_Info\">");
-                //load tính năng
-            
-                int id = int.Parse(listProduct[i].id.ToString());
-                var listfuc = db.tblFunctionProducts.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
-                var checkfun = db.tblConnectFunProuducts.Where(p => p.idPro == id).ToList();
-                if (checkfun.Count > 0)
-                {
-                    for (int j = 0; j < listfuc.Count; j++)
-                    {
-                        int idfun = int.Parse(listfuc[j].id.ToString());
-                        var connectfun = db.tblConnectFunProuducts.Where(p => p.idFunc == idfun && p.idPro == id).ToList();
-                        if (connectfun.Count > 0)
-                        {
-                            chuoi.Append("<a href=\"" + listfuc[j].Url + "\" rel=\"nofollow\" title=\"" + listfuc[j].Name + "\"><img src=\"" + listfuc[j].Images + "\" alt=\"" + listfuc[j].Name + "\" /></a>");
-                        }
-                    }
-
-                }
-                chuoi.Append("</div>");
+                
                 chuoi.Append("</div>");
                 chuoi.Append("<div class=\"Right_Info\">");
                 chuoi.Append("<span class=\"Pricesale\">" + string.Format("{0:#,#}", listProduct[i].PriceSale) + "<span>đ</span></span>");
@@ -208,25 +189,7 @@ namespace TOTO.Controllers.Display.Session.Product
                         chuoi.Append("<div class=\"Top_RightInfo\">");
                         chuoi.Append("<a href=\"/Order/OrderIndex?idp=" + listProduct[y].id + "\" title=\"Đặt hàng\" rel=\"nofollow\"><span></span></a>");
                         chuoi.Append("</div>");
-                        chuoi.Append("<div class=\"Bottom_RightInfo\">");
-                        int id = int.Parse(listProduct[y].id.ToString());
-                        var listfuc = db.tblFunctionProducts.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
-                        var checkfun = db.tblConnectFunProuducts.Where(p => p.idPro == id).ToList();
-                        if (checkfun.Count > 0)
-                        {
-                            for (int j = 0; j < listfuc.Count; j++)
-                            {
-                                int idfun = int.Parse(listfuc[j].id.ToString());
-                                var connectfun = db.tblConnectFunProuducts.Where(p => p.idFunc == idfun && p.idPro == id).ToList();
-                                if (connectfun.Count > 0)
-                                {
-                                    chuoi.Append("<a href=\"" + listfuc[j].Url + "\" rel=\"nofollow\" title=\"" + listfuc[j].Name + "\"><img src=\"" + listfuc[j].Images + "\" alt=\"" + listfuc[j].Name + "\" title=\"" + listfuc[j].Name + "\"/></a>");
-                                }
-                            }
-
-                        }
-
-                        chuoi.Append("</div>");
+                        
                         chuoi.Append("</div>");
                         chuoi.Append("</div>");
                         chuoi.Append("</div>");
@@ -354,31 +317,7 @@ namespace TOTO.Controllers.Display.Session.Product
 
             ViewBag.color = chuoicolor;
             //load tính năng
-            StringBuilder chuoifun = new StringBuilder();
-            var listfuc = db.tblFunctionProducts.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
-            var checkfun = db.tblConnectFunProuducts.Where(p => p.idPro == id).ToList();
-            if (checkfun.Count > 0)
-            {
-
-                chuoifun.Append(" <div id=\"Tech\">");
-                chuoifun.Append("<span class=\"tinhnang\">Những tính năng nổi bật của " + Product.Name + "</span>");
-                for (int i = 0; i < listfuc.Count; i++)
-                {
-                    int idfun = int.Parse(listfuc[i].id.ToString());
-                    var connectfun = db.tblConnectFunProuducts.Where(p => p.idFunc == idfun && p.idPro == id).ToList();
-                    if (connectfun.Count > 0)
-                    {
-                        chuoifun.Append("<div class=\"Tear_tech\">");
-                        chuoifun.Append("<span class=\"imagetech\" style=\"background:url(" + listfuc[i].Images + ") no-repeat center center scroll transparent;\"></span>");
-                        chuoifun.Append("<span class=\"Destech\">" + listfuc[i].Name + "</span>");
-                        chuoifun.Append("<p>Xem chi tiết về " + listfuc[i].Name + " <a href=\"" + listfuc[i].Url + "\" title=\"" + listfuc[i].Name + "\">Tại đây &raquo;</a></p>");
-                        chuoifun.Append("</div>");
-                    }
-                }
-                chuoifun.Append("</div>");
-
-            }
-            ViewBag.chuoifun = chuoifun;
+            
             //Load file kỹ thuật
 
             var filesbaogia = db.tblFiles.Where(p => p.idp == id & p.Cate == 1).Take(1).ToList();
@@ -459,24 +398,7 @@ namespace TOTO.Controllers.Display.Session.Product
                 chuoiproduct.Append("<div class=\"Top_RightInfo\">");
                 chuoiproduct.Append("<a href=\"/Order/OrderIndex?idp=" + listProduct[i].id + "\" title=\"" + listProduct[i].Name + "\" rel=\"nofollow\"><span></span></a>");
                 chuoiproduct.Append("</div>");
-                chuoiproduct.Append("<div class=\"Bottom_RightInfo\">");
-                int ids = int.Parse(listProduct[i].id.ToString());
-                var listfuc = db.tblFunctionProducts.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
-                var checkfun = db.tblConnectFunProuducts.Where(p => p.idPro == ids).ToList();
-                if (checkfun.Count > 0)
-                {
-                    for (int j = 0; j < listfuc.Count; j++)
-                    {
-                        int idfun = int.Parse(listfuc[j].id.ToString());
-                        var connectfun = db.tblConnectFunProuducts.Where(p => p.idFunc == idfun && p.idPro == ids).ToList();
-                        if (connectfun.Count > 0)
-                        {
-                            chuoiproduct.Append("<a href=\"" + listfuc[j].Url + "\" rel=\"nofollow\" title=\"" + listfuc[j].Name + "\"><img src=\"" + listfuc[j].Images + "\" alt=\"" + listfuc[j].Name + "\" /></a>");
-                        }
-                    }
-
-                }
-                chuoiproduct.Append("</div>");
+               
                 chuoiproduct.Append("</div>");
                 chuoiproduct.Append("</div>");
                 chuoiproduct.Append("</div>");
@@ -557,24 +479,7 @@ namespace TOTO.Controllers.Display.Session.Product
                         chuoi.Append("<div class=\"Top_RightInfo\">");
                         chuoi.Append("<a href=\"\" title=\"\"><span></span></a>");
                         chuoi.Append("</div>");
-                        chuoi.Append(" <div class=\"Bottom_RightInfo\">");
-                        int ids = int.Parse(listProduct[j].id.ToString());
-                        var listfuc = db.tblFunctionProducts.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
-                        var checkfun = db.tblConnectFunProuducts.Where(p => p.idPro == ids).ToList();
-                        if (checkfun.Count > 0)
-                        {
-                            for (int z = 0; z < listfuc.Count; z++)
-                            {
-                                int idfun = int.Parse(listfuc[z].id.ToString());
-                                var connectfun = db.tblConnectFunProuducts.Where(p => p.idFunc == idfun && p.idPro == ids).ToList();
-                                if (connectfun.Count > 0)
-                                {
-                                    chuoi.Append("<a href=\"" + listfuc[z].Url + "\" rel=\"nofollow\" title=\"" + listfuc[z].Name + "\"><img src=\"" + listfuc[z].Images + "\" alt=\"" + listfuc[z].Name + "\" /></a>");
-                                }
-                            }
-
-                        }
-                        chuoi.Append("</div>");
+                        
                         chuoi.Append("</div>");
                         chuoi.Append("</div>");
                         chuoi.Append("</div>");
@@ -633,24 +538,7 @@ namespace TOTO.Controllers.Display.Session.Product
                     chuoi.Append("<div class=\"Top_RightInfo\">");
                     chuoi.Append("<a href=\"\" title=\"\"><span></span></a>");
                     chuoi.Append("</div>");
-                    chuoi.Append(" <div class=\"Bottom_RightInfo\">");
-                    int ids = int.Parse(listProduct[j].id.ToString());
-                    var listfuc = db.tblFunctionProducts.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
-                    var checkfun = db.tblConnectFunProuducts.Where(p => p.idPro == ids).ToList();
-                    if (checkfun.Count > 0)
-                    {
-                        for (int z = 0; z < listfuc.Count; z++)
-                        {
-                            int idfun = int.Parse(listfuc[z].id.ToString());
-                            var connectfun = db.tblConnectFunProuducts.Where(p => p.idFunc == idfun && p.idPro == ids).ToList();
-                            if (connectfun.Count > 0)
-                            {
-                                chuoi.Append("<a href=\"" + listfuc[z].Url + "\" rel=\"nofollow\" title=\"" + listfuc[z].Name + "\"><img src=\"" + listfuc[z].Images + "\" alt=\"" + listfuc[z].Name + "\" title=\"" + listfuc[z].Name + "\" /></a>");
-                            }
-                        }
-
-                    }
-                    chuoi.Append("</div>");
+                   
                     chuoi.Append("</div>");
                     chuoi.Append("</div>");
                     chuoi.Append("</div>");
@@ -726,24 +614,7 @@ namespace TOTO.Controllers.Display.Session.Product
                 chuoiproduct.Append("<div class=\"Top_RightInfo\">");
                 chuoiproduct.Append("<a href=\"/Order/OrderIndex?idp=" + listProduct[j].id + "\" title=\"" + listProduct[j].Name + "\" rel=\"nofollow\"><span></span></a>");
                 chuoiproduct.Append("</div>");
-                chuoiproduct.Append("<div class=\"Bottom_RightInfo\">");
-                int ids = int.Parse(listProduct[j].id.ToString());
-                var listfuc = db.tblFunctionProducts.Where(p => p.Active == true).OrderBy(p => p.Ord).ToList();
-                var checkfun = db.tblConnectFunProuducts.Where(p => p.idPro == ids).ToList();
-                if (checkfun.Count > 0)
-                {
-                    for (int z = 0; z < listfuc.Count; z++)
-                    {
-                        int idfun = int.Parse(listfuc[z].id.ToString());
-                        var connectfun = db.tblConnectFunProuducts.Where(p => p.idFunc == idfun && p.idPro == ids).ToList();
-                        if (connectfun.Count > 0)
-                        {
-                            chuoiproduct.Append("<a href=\"" + listfuc[z].Url + "\" rel=\"nofollow\" title=\"" + listfuc[z].Name + "\"><img src=\"" + listfuc[z].Images + "\" alt=\"" + listfuc[z].Name + "\" /></a>");
-                        }
-                    }
-
-                }
-                chuoiproduct.Append("</div>");
+                
                 chuoiproduct.Append("</div>");
                 chuoiproduct.Append("</div>");
                 chuoiproduct.Append("</div>");
